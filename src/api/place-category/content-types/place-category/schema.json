@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "place_categories",
+  "info": {
+    "singularName": "place-category",
+    "pluralName": "place-categories",
+    "displayName": "Place category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "places": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place",
+      "mappedBy": "place_categories"
+    }
+  }
+}
