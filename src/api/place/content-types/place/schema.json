@@ -33,12 +33,6 @@
         "audios"
       ]
     },
-    "lat": {
-      "type": "decimal"
-    },
-    "lng": {
-      "type": "decimal"
-    },
     "place_categories": {
       "type": "relation",
       "relation": "manyToMany",
@@ -46,14 +40,22 @@
       "inversedBy": "places"
     },
     "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "location": {
+      "type": "customField",
+      "options": {
+        "info": true
+      },
+      "customField": "plugin::strapi-location-picker.location-picker"
     }
   }
 }

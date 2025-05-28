@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-05-27T14:00:10.898Z"
+    "x-generation-date": "2025-05-28T15:43:51.769Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5528,9 +5528,6 @@
                     }
                   }
                 },
-                "color": {
-                  "type": "string"
-                },
                 "events": {
                   "type": "array",
                   "items": {
@@ -5974,14 +5971,6 @@
                               }
                             }
                           },
-                          "lat": {
-                            "type": "number",
-                            "format": "float"
-                          },
-                          "lng": {
-                            "type": "number",
-                            "format": "float"
-                          },
                           "place_categories": {
                             "type": "array",
                             "items": {
@@ -6196,6 +6185,7 @@
                               }
                             }
                           },
+                          "location": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -6302,6 +6292,9 @@
                       }
                     }
                   }
+                },
+                "color": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -6716,9 +6709,6 @@
                 ],
                 "example": "string or id"
               },
-              "color": {
-                "type": "string"
-              },
               "events": {
                 "type": "array",
                 "items": {
@@ -6732,6 +6722,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "color": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -7399,9 +7392,6 @@
               }
             }
           },
-          "color": {
-            "type": "string"
-          },
           "events": {
             "type": "array",
             "items": {
@@ -7568,9 +7558,6 @@
                           }
                         }
                       },
-                      "color": {
-                        "type": "string"
-                      },
                       "events": {
                         "type": "array",
                         "items": {
@@ -7584,6 +7571,9 @@
                             }
                           }
                         }
+                      },
+                      "color": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -8045,14 +8035,6 @@
                         }
                       }
                     },
-                    "lat": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "lng": {
-                      "type": "number",
-                      "format": "float"
-                    },
                     "place_categories": {
                       "type": "array",
                       "items": {
@@ -8267,6 +8249,7 @@
                         }
                       }
                     },
+                    "location": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -8373,6 +8356,9 @@
                 }
               }
             }
+          },
+          "color": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -9570,14 +9556,6 @@
                   "example": "string or id"
                 }
               },
-              "lat": {
-                "type": "number",
-                "format": "float"
-              },
-              "lng": {
-                "type": "number",
-                "format": "float"
-              },
               "place_categories": {
                 "type": "array",
                 "items": {
@@ -9603,6 +9581,7 @@
                 ],
                 "example": "string or id"
               },
+              "location": {},
               "locale": {
                 "type": "string"
               },
@@ -10273,14 +10252,6 @@
               }
             }
           },
-          "lat": {
-            "type": "number",
-            "format": "float"
-          },
-          "lng": {
-            "type": "number",
-            "format": "float"
-          },
           "place_categories": {
             "type": "array",
             "items": {
@@ -10445,14 +10416,6 @@
                           }
                         }
                       },
-                      "lat": {
-                        "type": "number",
-                        "format": "float"
-                      },
-                      "lng": {
-                        "type": "number",
-                        "format": "float"
-                      },
                       "place_categories": {
                         "type": "array",
                         "items": {
@@ -10596,6 +10559,7 @@
                           }
                         }
                       },
+                      "location": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -10833,6 +10797,7 @@
               }
             }
           },
+          "location": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -11613,14 +11578,6 @@
                     }
                   }
                 },
-                "lat": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "lng": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "place_categories": {
                   "type": "array",
                   "items": {
@@ -11835,6 +11792,7 @@
                     }
                   }
                 },
+                "location": {},
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"

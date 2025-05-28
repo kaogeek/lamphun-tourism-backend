@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event-category",
     "pluralName": "event-categories",
-    "displayName": "Event category"
+    "displayName": "Event category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,23 +15,26 @@
       "type": "string"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "color": {
-      "type": "string"
+      ]
     },
     "events": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "event_categories"
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }
