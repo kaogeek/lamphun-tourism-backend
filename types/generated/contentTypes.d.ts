@@ -604,6 +604,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    address: Schema.Attribute.Text;
     cover_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;

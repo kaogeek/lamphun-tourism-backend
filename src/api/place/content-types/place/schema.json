@@ -59,6 +59,9 @@
     "opening_hours": {
       "type": "customField",
       "customField": "plugin::opening-hours.opening_hours"
+    },
+    "address": {
+      "type": "text"
     }
   }
 }
