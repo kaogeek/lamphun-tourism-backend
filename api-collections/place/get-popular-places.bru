@@ -1,0 +1,18 @@
+meta {
+  name: get-popular-places
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/places?pagination[pageSize]=3&filters[popular][$eq]=true&populate[0]=place_categories&fields=name, description
+  body: none
+  auth: none
+}
+
+params:query {
+  pagination[pageSize]: 3
+  filters[popular][$eq]: true
+  populate[0]: place_categories
+  fields: name, description
+}

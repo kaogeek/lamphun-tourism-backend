@@ -1,0 +1,17 @@
+meta {
+  name: get-places
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/places?populate[0]=place_categories&fields=name, description
+  body: none
+  auth: none
+}
+
+params:query {
+  populate[0]: place_categories
+  fields: name, description
+  ~filters[name][$eq]: วัดพระธาตุหริภุญชัย
+}

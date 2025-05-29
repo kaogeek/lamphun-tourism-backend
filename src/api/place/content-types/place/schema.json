@@ -62,6 +62,9 @@
     },
     "address": {
       "type": "text"
+    },
+    "popular": {
+      "type": "boolean"
     }
   }
 }
