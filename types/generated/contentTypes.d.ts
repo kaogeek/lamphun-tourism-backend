@@ -578,7 +578,6 @@ export interface ApiPlaceCategoryPlaceCategory
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    places: Schema.Attribute.Relation<'manyToMany', 'api::place.place'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -620,8 +619,10 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
         }
       >;
     name: Schema.Attribute.String;
+    opening_hours: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<'plugin::opening-hours.opening_hours'>;
     place_categories: Schema.Attribute.Relation<
-      'manyToMany',
+      'oneToMany',
       'api::place-category.place-category'
     >;
     place_images: Schema.Attribute.Media<

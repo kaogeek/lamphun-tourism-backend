@@ -16,12 +16,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "places": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::place.place",
-      "mappedBy": "place_categories"
     }
   }
 }

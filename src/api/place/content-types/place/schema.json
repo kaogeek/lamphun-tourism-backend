@@ -35,9 +35,8 @@
     },
     "place_categories": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::place-category.place-category",
-      "inversedBy": "places"
+      "relation": "oneToMany",
+      "target": "api::place-category.place-category"
     },
     "cover_image": {
       "type": "media",
@@ -56,6 +55,10 @@
         "info": true
       },
       "customField": "plugin::strapi-location-picker.location-picker"
+    },
+    "opening_hours": {
+      "type": "customField",
+      "customField": "plugin::opening-hours.opening_hours"
     }
   }
 }

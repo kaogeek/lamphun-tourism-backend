@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_tests",
+  "info": {
+    "displayName": "test",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    },
+    "asd": {
+      "type": "decimal"
+    },
+    "location": {
+      "type": "customField",
+      "options": {
+        "info": true
+      },
+      "customField": "plugin::strapi-location-picker.location-picker"
+    }
+  }
+}
