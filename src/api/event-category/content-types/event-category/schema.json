@@ -14,7 +14,7 @@
     "name": {
       "type": "string"
     },
-    "thumbnail": {
+    "cover_image": {
       "type": "media",
       "multiple": false,
       "required": false,
