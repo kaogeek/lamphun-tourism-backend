@@ -23,7 +23,7 @@ export default {
       // 'ru',
       // 'sk',
       // 'sv',
-      // 'th',
+      "th",
       // 'tr',
       // 'uk',
       // 'vi',
