@@ -1,0 +1,15 @@
+meta {
+  name: get-places-by-doc-id-nearby
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/places/n98gyk2vfhagmvxwn7pjl0o2/nearby?limit=50
+  body: none
+  auth: none
+}
+
+params:query {
+  limit: 50
+}

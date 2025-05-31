@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{host}}/places/nearby
+  url: {{host}}/places/nearby?lat=13.745624&lng=100.534220
   body: none
   auth: none
+}
+
+params:query {
+  lat: 13.745624
+  lng: 100.534220
 }

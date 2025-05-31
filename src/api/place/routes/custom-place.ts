@@ -9,5 +9,14 @@ export default {
         middlewares: [],
       },
     },
+    {
+      method: "GET",
+      path: "/places/:documentId/nearby",
+      handler: "place.findNearbyByDocumentId",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
