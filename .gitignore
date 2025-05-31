@@ -133,3 +133,6 @@ build
 
 # Docker
 db-data
+
+# Bruno
+api-collections/environments/poc.bru
