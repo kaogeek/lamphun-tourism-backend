@@ -22,7 +22,7 @@
     "description": {
       "type": "blocks"
     },
-    "place_images": {
+    "placeImages": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -33,12 +33,12 @@
         "audios"
       ]
     },
-    "place_categories": {
+    "placeCategories": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::place-category.place-category"
     },
-    "cover_image": {
+    "coverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -56,7 +56,7 @@
       },
       "customField": "plugin::strapi-location-picker.location-picker"
     },
-    "opening_hours": {
+    "openingHours": {
       "type": "customField",
       "customField": "plugin::opening-hours.opening_hours"
     },
@@ -72,7 +72,10 @@
       "column": {
         "defaultTo": 0,
         "type": "decimal",
-        "args": [9, 6]
+        "args": [
+          9,
+          6
+        ]
       }
     },
     "lng": {
@@ -81,8 +84,14 @@
       "column": {
         "defaultTo": 0,
         "type": "decimal",
-        "args": [9, 6]
+        "args": [
+          9,
+          6
+        ]
       }
+    },
+    "shortDescription": {
+      "type": "text"
     }
   }
 }

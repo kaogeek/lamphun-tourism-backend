@@ -55,29 +55,6 @@ export default factories.createCoreService("api::place.place", {
 
     const result = await query.orderBy("distance_m", "asc").limit(limit);
 
-    // const result2 = await knex("your_table_name");
-
-    // const result = await strapi.db.connection.raw(
-    //   `
-    //     SELECT 
-    //       p.id AS id,
-    //       p.document_id AS document_id,
-    //       ${distanceMSelect} AS distance_m
-    //     FROM places p
-    //     WHERE p.published_at IS NOT NULL
-    //       AND
-    //       ${distanceMSelect} <= :areaM
-    //     ORDER BY distance_m ASC
-    //     LIMIT :limit;
-    //   `,
-    //   {
-    //     lat,
-    //     lng,
-    //     areaM,
-    //     limit
-    //   }
-    // );
-
     const rows = result as PlaceDistanceRow[];
 
     // TODO: Maybe this could be done with a single query?
@@ -98,7 +75,8 @@ export default factories.createCoreService("api::place.place", {
         },
       },
       status: "published",
-      populate: ["cover_image", "place_images", "place_categories"],
+      fields: ["name", "shortDescription", "createdAt", "updatedAt", "address"],
+      populate: ["coverImage", "placeImages", "placeCategories"],
     });
 
     const placesWithDistance = places

@@ -14,7 +14,7 @@
     "name": {
       "type": "string"
     },
-    "cover_image": {
+    "coverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -24,12 +24,6 @@
         "videos",
         "audios"
       ]
-    },
-    "events": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::event.event",
-      "mappedBy": "event_categories"
     },
     "color": {
       "type": "customField",

@@ -5,13 +5,15 @@ meta {
 }
 
 get {
-  url: {{host}}/places?populate[0]=place_categories&fields=name, description
+  url: {{host}}/places?populate[0]=placeCategories&fields=name, shortDescription, createdAt, updatedAt , address&filters[name][$eq]=วัดพระธาตุหริภุญชัย&filters[placeCategories][documentId][$in][0]=ncqsu26a9x1s3oypwyheccin&filters[placeCategories][documentId][$in][1]=suj1u4987p2f72or86oxts5t
   body: none
   auth: none
 }
 
 params:query {
-  populate[0]: place_categories
-  fields: name, description
-  ~filters[name][$eq]: วัดพระธาตุหริภุญชัย
+  populate[0]: placeCategories
+  fields: name, shortDescription, createdAt, updatedAt , address
+  filters[name][$eq]: วัดพระธาตุหริภุญชัย
+  filters[placeCategories][documentId][$in][0]: ncqsu26a9x1s3oypwyheccin
+  filters[placeCategories][documentId][$in][1]: suj1u4987p2f72or86oxts5t
 }

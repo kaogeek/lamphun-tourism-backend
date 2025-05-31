@@ -417,13 +417,12 @@ export interface ApiEventCategoryEventCategory
   attributes: {
     color: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
-    cover_image: Schema.Attribute.Media<
+    coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    events: Schema.Attribute.Relation<'manyToMany', 'api::event.event'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -455,7 +454,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    clover_image: Schema.Attribute.Media<
+    cloverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -472,14 +471,14 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    end_date: Schema.Attribute.DateTime &
+    endDate: Schema.Attribute.DateTime &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    event_categories: Schema.Attribute.Relation<
-      'manyToMany',
+    eventCategories: Schema.Attribute.Relation<
+      'oneToMany',
       'api::event-category.event-category'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -487,7 +486,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    event_images: Schema.Attribute.Media<
+    eventImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -505,7 +504,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    start_date: Schema.Attribute.DateTime &
+    shortDescription: Schema.Attribute.Text;
+    startDate: Schema.Attribute.DateTime &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -605,7 +605,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
-    cover_image: Schema.Attribute.Media<
+    coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -624,18 +624,19 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
         }
       >;
     name: Schema.Attribute.String;
-    opening_hours: Schema.Attribute.JSON &
+    openingHours: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<'plugin::opening-hours.opening_hours'>;
-    place_categories: Schema.Attribute.Relation<
+    placeCategories: Schema.Attribute.Relation<
       'oneToMany',
       'api::place-category.place-category'
     >;
-    place_images: Schema.Attribute.Media<
+    placeImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
     popular: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

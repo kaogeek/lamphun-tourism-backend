@@ -1,11 +1,11 @@
 meta {
-  name: get-place-category
+  name: get-event-category
   type: http
   seq: 1
 }
 
 get {
-  url: {{host}}/place-categories?pagination[page]=1&pagination[pageSize]=6
+  url: {{host}}/event-categories?pagination[page]=1&pagination[pageSize]=6
   body: none
   auth: none
 }

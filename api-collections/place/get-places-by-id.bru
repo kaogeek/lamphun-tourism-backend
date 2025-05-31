@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{host}}/places/mqajdm6x3agl2tf40qno6rvl?fields=name, description, createdAt, updatedAt, address, opening_hours&populate[0]=cover_image&populate[1]=place_images&populate[2]=place_categories
+  url: {{host}}/places/n98gyk2vfhagmvxwn7pjl0o2?fields=name, description, createdAt, updatedAt, address, openingHours&populate[0]=coverImage&populate[1]=placeImages&populate[2]=placeCategories
   body: none
   auth: none
 }
 
 params:query {
-  fields: name, description, createdAt, updatedAt, address, opening_hours
-  populate[0]: cover_image
-  populate[1]: place_images
-  populate[2]: place_categories
+  fields: name, description, createdAt, updatedAt, address, openingHours
+  populate[0]: coverImage
+  populate[1]: placeImages
+  populate[2]: placeCategories
 }

@@ -1,0 +1,20 @@
+meta {
+  name: get-event
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/events?fields=title, shortDescription, startDate, endDate&populate[0]=eventCategories&populate[3]=place
+  body: none
+  auth: none
+}
+
+params:query {
+  fields: title, shortDescription, startDate, endDate
+  populate[0]: eventCategories
+  populate[3]: place
+  ~populate[1]: cloverImage
+  ~populate[2]: eventImages
+  ~pagination[page]: 1
+}

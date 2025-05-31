@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "start_date": {
+    "startDate": {
       "type": "datetime",
       "default": "2025-05-26T17:15:12.449Z",
       "pluginOptions": {
@@ -25,7 +25,7 @@
         }
       }
     },
-    "end_date": {
+    "endDate": {
       "type": "datetime",
       "pluginOptions": {
         "i18n": {
@@ -49,18 +49,17 @@
         }
       }
     },
-    "event_categories": {
+    "eventCategories": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::event-category.event-category",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "inversedBy": "events"
+      }
     },
-    "clover_image": {
+    "cloverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -76,7 +75,7 @@
         }
       }
     },
-    "event_images": {
+    "eventImages": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -101,6 +100,9 @@
           "localized": false
         }
       }
+    },
+    "shortDescription": {
+      "type": "text"
     }
   }
 }
