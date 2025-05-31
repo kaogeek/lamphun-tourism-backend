@@ -68,11 +68,21 @@
     },
     "lat": {
       "type": "decimal",
-      "default": 0
+      "default": 0,
+      "column": {
+        "defaultTo": 0,
+        "type": "decimal",
+        "args": [9, 6]
+      }
     },
     "lng": {
       "type": "decimal",
-      "default": 0
+      "default": 0,
+      "column": {
+        "defaultTo": 0,
+        "type": "decimal",
+        "args": [9, 6]
+      }
     }
   }
 }
