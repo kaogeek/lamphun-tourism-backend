@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-05-29T14:45:17.718Z"
+    "x-generation-date": "2025-05-31T02:49:58.057Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6179,6 +6179,14 @@
                           "popular": {
                             "type": "boolean"
                           },
+                          "lat": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "lng": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -8236,6 +8244,14 @@
                     "popular": {
                       "type": "boolean"
                     },
+                    "lat": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "lng": {
+                      "type": "number",
+                      "format": "float"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -9575,6 +9591,14 @@
               "popular": {
                 "type": "boolean"
               },
+              "lat": {
+                "type": "number",
+                "format": "float"
+              },
+              "lng": {
+                "type": "number",
+                "format": "float"
+              },
               "locale": {
                 "type": "string"
               },
@@ -10453,6 +10477,14 @@
           "popular": {
             "type": "boolean"
           },
+          "lat": {
+            "type": "number",
+            "format": "float"
+          },
+          "lng": {
+            "type": "number",
+            "format": "float"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -10787,6 +10819,14 @@
                 },
                 "popular": {
                   "type": "boolean"
+                },
+                "lat": {
+                  "type": "number",
+                  "format": "float"
+                },
+                "lng": {
+                  "type": "number",
+                  "format": "float"
                 },
                 "createdAt": {
                   "type": "string",

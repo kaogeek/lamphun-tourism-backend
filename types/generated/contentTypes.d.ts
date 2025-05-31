@@ -612,6 +612,8 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
+    lat: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
+    lng: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::place.place'>;
     location: Schema.Attribute.JSON &

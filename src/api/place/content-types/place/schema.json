@@ -65,6 +65,14 @@
     },
     "popular": {
       "type": "boolean"
+    },
+    "lat": {
+      "type": "decimal",
+      "default": 0
+    },
+    "lng": {
+      "type": "decimal",
+      "default": 0
     }
   }
 }
