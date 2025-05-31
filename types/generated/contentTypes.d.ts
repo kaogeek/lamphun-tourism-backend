@@ -510,8 +510,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
         i18n: {
           localized: false;
         };
-      }> &
-      Schema.Attribute.DefaultTo<'2025-05-26T17:15:12.449Z'>;
+      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{host}}/places?pagination[pageSize]=3&populate[0]=placeCategories&fields=name, shortDescription, createdAt, updatedAt , address
+  url: {{host}}/places?pagination[pageSize]=3&populate[0]=placeCategories&fields=name, shortDescription, createdAt, updatedAt , address&filters[popular][$eq]=true
   body: none
   auth: none
 }
@@ -14,5 +14,5 @@ params:query {
   pagination[pageSize]: 3
   populate[0]: placeCategories
   fields: name, shortDescription, createdAt, updatedAt , address
-  ~filters[popular][$eq]: true
+  filters[popular][$eq]: true
 }

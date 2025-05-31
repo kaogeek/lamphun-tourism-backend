@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{host}}/events?fields=title, shortDescription, startDate, endDate&populate[0]=eventCategories&populate[3]=place
+  url: {{host}}/events?fields=title, shortDescription, startDate, endDate&populate[0]=eventCategories&populate[3]=place&sort[0]=startDate&populate[1]=cloverImage
   body: none
   auth: none
 }
@@ -14,7 +14,8 @@ params:query {
   fields: title, shortDescription, startDate, endDate
   populate[0]: eventCategories
   populate[3]: place
-  ~populate[1]: cloverImage
+  sort[0]: startDate
+  populate[1]: cloverImage
+  ~filters[eventCategories][documentId][$in][0]: apdw0txwyyar6w4gl19xk2cz
   ~populate[2]: eventImages
-  ~pagination[page]: 1
 }
