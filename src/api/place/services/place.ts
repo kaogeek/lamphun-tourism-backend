@@ -76,7 +76,7 @@ export default factories.createCoreService("api::place.place", {
       },
       status: "published",
       fields: ["name", "shortDescription", "createdAt", "updatedAt", "address"],
-      populate: ["coverImage", "placeImages", "placeCategories"],
+      populate: ["coverImage", "placeImages", "placeCategory"],
     });
 
     const placesWithDistance = places

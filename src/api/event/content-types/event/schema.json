@@ -48,9 +48,9 @@
         }
       }
     },
-    "eventCategories": {
+    "eventCategory": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::event-category.event-category",
       "pluginOptions": {
         "i18n": {

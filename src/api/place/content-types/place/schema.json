@@ -33,9 +33,9 @@
         "audios"
       ]
     },
-    "placeCategories": {
+    "placeCategory": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::place-category.place-category"
     },
     "coverImage": {

@@ -477,8 +477,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    eventCategories: Schema.Attribute.Relation<
-      'oneToMany',
+    eventCategory: Schema.Attribute.Relation<
+      'oneToOne',
       'api::event-category.event-category'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -625,8 +625,8 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     openingHours: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<'plugin::opening-hours.opening_hours'>;
-    placeCategories: Schema.Attribute.Relation<
-      'oneToMany',
+    placeCategory: Schema.Attribute.Relation<
+      'oneToOne',
       'api::place-category.place-category'
     >;
     placeImages: Schema.Attribute.Media<
