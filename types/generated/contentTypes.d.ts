@@ -421,10 +421,12 @@ export interface ApiEventCategoryEventCategory
   };
   attributes: {
     color: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -439,6 +441,7 @@ export interface ApiEventCategoryEventCategory
       'api::event-category.event-category'
     >;
     name: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -468,7 +471,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    cloverImage: Schema.Attribute.Media<
+    coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -480,12 +483,14 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     endDate: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -519,18 +524,22 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
     startDate: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
     title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -596,6 +605,7 @@ export interface ApiPlaceCategoryPlaceCategory
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -607,6 +617,7 @@ export interface ApiPlaceCategoryPlaceCategory
       'api::place-category.place-category'
     >;
     name: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -637,6 +648,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -644,11 +656,13 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
       }>;
     coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -666,6 +680,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
         }
       >;
     name: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -681,9 +696,12 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    popular: Schema.Attribute.Boolean;
+    popular: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

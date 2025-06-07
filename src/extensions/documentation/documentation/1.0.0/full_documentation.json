@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-07T02:50:49.432Z"
+    "x-generation-date": "2025-06-07T15:40:29.653Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4775,6 +4775,14 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "startDate",
+              "endDate",
+              "title",
+              "description",
+              "shortDescription",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "startDate": {
@@ -4800,7 +4808,7 @@
                 ],
                 "example": "string or id"
               },
-              "cloverImage": {
+              "coverImage": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -4837,6 +4845,9 @@
                 "example": "string or id"
               },
               "shortDescription": {
+                "type": "string"
+              },
+              "slug": {
                 "type": "string"
               },
               "locale": {
@@ -4897,6 +4908,14 @@
       },
       "Event": {
         "type": "object",
+        "required": [
+          "startDate",
+          "endDate",
+          "title",
+          "description",
+          "shortDescription",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -5582,7 +5601,7 @@
               }
             }
           },
-          "cloverImage": {
+          "coverImage": {
             "type": "object",
             "properties": {
               "id": {
@@ -6260,6 +6279,9 @@
           "shortDescription": {
             "type": "string"
           },
+          "slug": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -6331,7 +6353,7 @@
                     }
                   }
                 },
-                "cloverImage": {
+                "coverImage": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -6606,6 +6628,9 @@
                 "shortDescription": {
                   "type": "string"
                 },
+                "slug": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -6680,6 +6705,11 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "name",
+              "coverImage",
+              "color"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -6757,6 +6787,11 @@
       },
       "EventCategory": {
         "type": "object",
+        "required": [
+          "name",
+          "coverImage",
+          "color"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -8730,6 +8765,14 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "name",
+              "description",
+              "coverImage",
+              "address",
+              "popular",
+              "shortDescription"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -8849,6 +8892,14 @@
       },
       "Place": {
         "type": "object",
+        "required": [
+          "name",
+          "description",
+          "coverImage",
+          "address",
+          "popular",
+          "shortDescription"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -10094,6 +10145,10 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "name",
+              "description"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -10160,6 +10215,10 @@
       },
       "PlaceCategory": {
         "type": "object",
+        "required": [
+          "name",
+          "description"
+        ],
         "properties": {
           "id": {
             "type": "number"

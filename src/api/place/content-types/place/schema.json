@@ -22,7 +22,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "description": {
       "type": "blocks",
@@ -30,7 +31,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "placeImages": {
       "type": "media",
@@ -51,7 +53,7 @@
     "coverImage": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -76,10 +78,13 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "popular": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": false
     },
     "lat": {
       "type": "decimal",
@@ -111,7 +116,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     }
   }
 }
