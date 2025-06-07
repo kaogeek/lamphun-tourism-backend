@@ -5,14 +5,15 @@ meta {
 }
 
 get {
-  url: {{host}}/places?populate[0]=placeCategories&fields=name, shortDescription, createdAt, updatedAt , address
+  url: {{host}}/places?populate[0]=placeCategory&fields=name, shortDescription, createdAt, updatedAt , address, locale&populate[1]=localizations
   body: none
   auth: none
 }
 
 params:query {
-  populate[0]: placeCategories
-  fields: name, shortDescription, createdAt, updatedAt , address
+  populate[0]: placeCategory
+  fields: name, shortDescription, createdAt, updatedAt , address, locale
+  populate[1]: localizations
   ~filters[name][$eq]: วัดหัวลำโพง
   ~filters[placeCategories][documentId][$in][0]: bdww0inymfk1lwm8haz56uvv
   ~filters[placeCategories][documentId][$in][1]: u3uaqc3yrcklpe73e3hjswbd

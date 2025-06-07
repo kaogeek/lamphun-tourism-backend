@@ -87,12 +87,12 @@ export default factories.createCoreService("api::place.place", {
           return place;
         }
 
-        return { ...place, ...rawMetaData };
+        return { ...place, distanceM: rawMetaData.distance_m };
       })
       .sort((a: any, b: any) => {
         // TODO find solution make this typesafe
-        const distA = a.distance_m ?? Infinity;
-        const distB = b.distance_m ?? Infinity;
+        const distA = a.distanceM ?? Infinity;
+        const distB = b.distanceM ?? Infinity;
         return distA - distB;
       });
 
