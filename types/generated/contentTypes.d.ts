@@ -489,13 +489,16 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    endDate: Schema.Attribute.DateTime &
+    endDate: Schema.Attribute.Date &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
+    endTime: Schema.Attribute.Time &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'23:59:00.000'>;
     eventCategory: Schema.Attribute.Relation<
       'oneToOne',
       'api::event-category.event-category'
@@ -531,13 +534,16 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
         };
       }>;
     slug: Schema.Attribute.UID;
-    startDate: Schema.Attribute.DateTime &
+    startDate: Schema.Attribute.Date &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
+    startTime: Schema.Attribute.Time &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'00:00:00.000'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

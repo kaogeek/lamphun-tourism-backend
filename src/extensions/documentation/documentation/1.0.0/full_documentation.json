@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-07T16:26:44.475Z"
+    "x-generation-date": "2025-06-08T03:09:44.213Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4780,17 +4780,19 @@
               "endDate",
               "title",
               "description",
-              "shortDescription"
+              "shortDescription",
+              "startTime",
+              "endTime"
             ],
             "type": "object",
             "properties": {
               "startDate": {
                 "type": "string",
-                "format": "date-time"
+                "format": "date"
               },
               "endDate": {
                 "type": "string",
-                "format": "date-time"
+                "format": "date"
               },
               "title": {
                 "type": "string"
@@ -4848,6 +4850,16 @@
               },
               "slug": {
                 "type": "string"
+              },
+              "startTime": {
+                "type": "string",
+                "format": "time",
+                "example": "12:54.000"
+              },
+              "endTime": {
+                "type": "string",
+                "format": "time",
+                "example": "12:54.000"
               },
               "locale": {
                 "type": "string"
@@ -4912,7 +4924,9 @@
           "endDate",
           "title",
           "description",
-          "shortDescription"
+          "shortDescription",
+          "startTime",
+          "endTime"
         ],
         "properties": {
           "id": {
@@ -4923,11 +4937,11 @@
           },
           "startDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           },
           "endDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           },
           "title": {
             "type": "string"
@@ -6280,6 +6294,16 @@
           "slug": {
             "type": "string"
           },
+          "startTime": {
+            "type": "string",
+            "format": "time",
+            "example": "12:54.000"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "time",
+            "example": "12:54.000"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -6330,11 +6354,11 @@
                 },
                 "startDate": {
                   "type": "string",
-                  "format": "date-time"
+                  "format": "date"
                 },
                 "endDate": {
                   "type": "string",
-                  "format": "date-time"
+                  "format": "date"
                 },
                 "title": {
                   "type": "string"
@@ -6628,6 +6652,16 @@
                 },
                 "slug": {
                   "type": "string"
+                },
+                "startTime": {
+                  "type": "string",
+                  "format": "time",
+                  "example": "12:54.000"
+                },
+                "endTime": {
+                  "type": "string",
+                  "format": "time",
+                  "example": "12:54.000"
                 },
                 "createdAt": {
                   "type": "string",

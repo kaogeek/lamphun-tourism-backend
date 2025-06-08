@@ -17,7 +17,7 @@
   },
   "attributes": {
     "startDate": {
-      "type": "datetime",
+      "type": "date",
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -26,7 +26,7 @@
       "required": true
     },
     "endDate": {
-      "type": "datetime",
+      "type": "date",
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -116,6 +116,16 @@
     "slug": {
       "type": "uid",
       "required": false
+    },
+    "startTime": {
+      "type": "time",
+      "default": "00:00:00.000",
+      "required": true
+    },
+    "endTime": {
+      "type": "time",
+      "default": "23:59:00.000",
+      "required": true
     }
   }
 }

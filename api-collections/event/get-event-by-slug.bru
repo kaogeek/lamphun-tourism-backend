@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{host}}/events?fields=title, shortDescription, startDate, endDate&populate[0]=eventCategory&populate[3]=place&populate[1]=coverImage&populate[4]=localizations&filters[slug][$eq][0]=village-vibe
+  url: {{host}}/events?populate[0]=eventCategory&populate[3]=place&populate[1]=coverImage&populate[4]=localizations&filters[slug][$eq][0]=local-vibe
   body: none
   auth: none
 }
 
 params:query {
-  fields: title, shortDescription, startDate, endDate
   populate[0]: eventCategory
   populate[3]: place
   populate[1]: coverImage
   populate[4]: localizations
-  filters[slug][$eq][0]: village-vibe
+  filters[slug][$eq][0]: local-vibe
+  ~fields: title, shortDescription, startDate, endDate
   ~sort[0]: startDate
 }

@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{host}}/events/wlzvncqx2nznv59mi8b7g4w3/?fields=title, description, shortDescription, startDate, endDate&populate[0]=eventCategories&populate[3]=place&populate[1]=cloverImage&populate[2]=eventImages
+  url: {{host}}/events/wlzvncqx2nznv59mi8b7g4w3/?fields=title, description, shortDescription, startDate, endDate&populate[0]=eventCategory&populate[3]=place&populate[1]=coverImage&populate[2]=eventImages
   body: none
   auth: none
 }
 
 params:query {
   fields: title, description, shortDescription, startDate, endDate
-  populate[0]: eventCategories
+  populate[0]: eventCategory
   populate[3]: place
-  populate[1]: cloverImage
+  populate[1]: coverImage
   populate[2]: eventImages
 }
