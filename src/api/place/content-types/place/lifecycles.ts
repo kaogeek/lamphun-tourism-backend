@@ -1,4 +1,4 @@
-function patchData(event: any) {
+async function patchData(event: any) {
   const { data } = event.params;
   const location = data.location;
 
@@ -6,27 +6,36 @@ function patchData(event: any) {
     data.lat = location.lat;
     data.lng = location.lng;
   }
+
+  const defaultLocale = await strapi
+    .plugin("i18n")
+    .service("locales")
+    .getDefaultLocale();
+
+  if (data.locale && data.locale !== defaultLocale) {
+    data.slug = null;
+  }
 }
 
 export default {
-  beforeCreate(event) {
-    patchData(event);
+  async beforeCreate(event) {
+    await patchData(event);
   },
-  beforeCreateMany(event) {
+  async beforeCreateMany(event) {
     const { data } = event.params;
 
     for (const entry of data) {
-      patchData(entry);
+      await patchData(entry);
     }
   },
-  beforeUpdate(event) {
-    patchData(event);
+  async beforeUpdate(event) {
+    await patchData(event);
   },
-  beforeUpdateMany(event) {
+  async beforeUpdateMany(event) {
     const { data } = event.params;
 
     for (const entry of data) {
-      patchData(entry);
+      await patchData(entry);
     }
   },
 };
