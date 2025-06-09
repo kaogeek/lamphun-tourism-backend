@@ -1,5 +1,5 @@
 # TODO make Dockerfile to production ready current i will hot fix for fast deploy poc
-FROM node:22-alpine
+FROM node:22-slim
 
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
 
