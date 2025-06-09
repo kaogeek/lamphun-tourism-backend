@@ -10,7 +10,7 @@ for PLUGIN in "${PLUGINS[@]}"; do
   pushd "src/plugins/$PLUGIN" > /dev/null
 
   if [ -f "package.json" ]; then
-    npm install
+    npm i
     npm run build
   else
     echo "⚠️  No package.json found in $PLUGIN, skipping."

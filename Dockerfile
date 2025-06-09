@@ -18,8 +18,8 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/app
 
-COPY package.json package-lock.json ./
-RUN npm ci 
+COPY package.json ./
+RUN npm i
 
 COPY . .
 RUN chmod +x ci/build-plugins.sh
