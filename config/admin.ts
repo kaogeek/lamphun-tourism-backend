@@ -1,5 +1,10 @@
 export default ({ env }) => ({
-  watchIgnoreFiles: ["**/*.md", "**/db-data/**", "**/api-collections/**"],
+  watchIgnoreFiles: [
+    "**/*.md",
+    "**/db-data/**",
+    "**/api-collections/**",
+    "**/config/sync/**",
+  ],
   auth: {
     secret: env("ADMIN_JWT_SECRET"),
   },
