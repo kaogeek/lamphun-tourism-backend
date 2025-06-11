@@ -1,0 +1,94 @@
+{
+  "documentId": "w377iz4fev3enmquaqnxaapq",
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "cy8voax2s6otzfbz21rjnrh8",
+      "action": "api::event-category.event-category.find",
+      "locale": null
+    },
+    {
+      "documentId": "nbtdatvyeon8gt536kd6vty6",
+      "action": "api::event-category.event-category.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "k1ltw78tv516zmm9cywnwlgo",
+      "action": "api::event.event.find",
+      "locale": null
+    },
+    {
+      "documentId": "lvrx43ehdkfqrciwwxv7hpgc",
+      "action": "api::event.event.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "ndboyt2zh8win77oo8v9uvxq",
+      "action": "api::place-category.place-category.find",
+      "locale": null
+    },
+    {
+      "documentId": "x56psp8u8eydn219qe38xzaw",
+      "action": "api::place-category.place-category.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "q6aywq4zouhu7vvkdh1jm0f8",
+      "action": "api::place.place.find",
+      "locale": null
+    },
+    {
+      "documentId": "fstqa7s68d0chvstqik1if47",
+      "action": "api::place.place.findNearBy",
+      "locale": null
+    },
+    {
+      "documentId": "u2ijikqm84pwg88d68i93lg9",
+      "action": "api::place.place.findNearbyByDocumentId",
+      "locale": null
+    },
+    {
+      "documentId": "fjm8be6wachv7coynwv7a2mh",
+      "action": "api::place.place.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "t26g0zc2n6sp1phjm8kqomnb",
+      "action": "plugin::users-permissions.auth.callback",
+      "locale": null
+    },
+    {
+      "documentId": "bla6ymtwqhl6hqnsd7bwdqtg",
+      "action": "plugin::users-permissions.auth.connect",
+      "locale": null
+    },
+    {
+      "documentId": "wbcry7a3lg8q7emnv67zzkfu",
+      "action": "plugin::users-permissions.auth.emailConfirmation",
+      "locale": null
+    },
+    {
+      "documentId": "nq9u7rvuks6e10tbzezm8o63",
+      "action": "plugin::users-permissions.auth.forgotPassword",
+      "locale": null
+    },
+    {
+      "documentId": "anxgf3u86npv8vy3o7ml64ba",
+      "action": "plugin::users-permissions.auth.register",
+      "locale": null
+    },
+    {
+      "documentId": "op9qxky79bn8jxsv87fh5vtv",
+      "action": "plugin::users-permissions.auth.resetPassword",
+      "locale": null
+    },
+    {
+      "documentId": "aze016oxr2nyxnd3jo7acjzu",
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation",
+      "locale": null
+    }
+  ]
+}
