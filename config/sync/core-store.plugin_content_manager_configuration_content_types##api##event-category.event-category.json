@@ -121,11 +121,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "coverImage"
-      ],
       "edit": [
         [
           {
@@ -135,14 +130,19 @@
         ],
         [
           {
-            "name": "color",
+            "name": "coverImage",
             "size": 6
           },
           {
-            "name": "coverImage",
+            "name": "color",
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "coverImage"
       ]
     },
     "uid": "api::event-category.event-category"

@@ -262,16 +262,14 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "placeImages",
-        "placeCategory"
-      ],
       "edit": [
         [
           {
             "name": "name",
+            "size": 6
+          },
+          {
+            "name": "shortDescription",
             "size": 6
           }
         ],
@@ -283,13 +281,35 @@
         ],
         [
           {
-            "name": "location",
+            "name": "openingHours",
             "size": 12
           }
         ],
         [
           {
             "name": "address",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "location",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "coverImage",
+            "size": 6
+          },
+          {
+            "name": "placeImages",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "placeCategory",
             "size": 6
           },
           {
@@ -299,48 +319,16 @@
         ],
         [
           {
-            "name": "lat",
-            "size": 4
-          },
-          {
-            "name": "lng",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "placeImages",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "coverImage",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "openingHours",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "shortDescription",
-            "size": 6
-          },
-          {
-            "name": "placeCategory",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "slug",
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "placeImages",
+        "placeCategory"
       ]
     },
     "uid": "api::place.place"
