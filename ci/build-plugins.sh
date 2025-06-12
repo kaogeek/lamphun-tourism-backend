@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 echo "🔧 Building Strapi plugins..."
 
-PLUGINS=("opening-hours")
+PLUGINS="opening-hours"
 
-for PLUGIN in "${PLUGINS[@]}"; do
+for PLUGIN in $PLUGINS; do
   echo "📦 Building plugin: $PLUGIN"
-  pushd "src/plugins/$PLUGIN" > /dev/null
+  cd "src/plugins/$PLUGIN" || exit 1
 
   if [ -f "package.json" ]; then
     npm i
@@ -16,7 +16,7 @@ for PLUGIN in "${PLUGINS[@]}"; do
     echo "⚠️  No package.json found in $PLUGIN, skipping."
   fi
 
-  popd > /dev/null
+  cd - > /dev/null
 done
 
 echo "✅ All plugins built successfully."
